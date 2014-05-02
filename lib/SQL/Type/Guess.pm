@@ -66,8 +66,43 @@ sub new {
     bless \%options => $class;
 }
 
+=head2 C<< $g->column_type >>
+
+    $g->guess({ foo => 1, bar => 'Hello' },{ foo => 1000, bar => 'World' });
+    print $g->column_type->{ 'foo' } # decimal(4,0)
+
+Returns a hashref containing the SQL types to store all
+values in the columns seen so far.
+
+=cut
+
 sub column_type { $_[0]->{column_type} };
+
+=head2 C<< $g->column_map >>
+
+Returns the hashref used for the type transitions. The current
+transitions used for generalizing data are:
+
+  date -> decimal -> varchar
+
+This is not entirely safe, as C<2014-01-01> can't be safely
+loaded into an C<decimal> column, but assuming your data is representative
+of the data to be stored that shouldn't be much of an issue.
+
+=cut
+
 sub column_map  { $_[0]->{column_map} };
+
+=head2 C<< $g->guess_data_type $OLD_TYPE, @VALUES >>
+
+    my $type= $g->guess_data_type( $type, 1,2,3,undef,'Hello','World', );
+
+Returns the data type that encompasses the already established data type in C<$type>
+and the new values as passed in via C<@values>.
+
+If there is no preexisting data type, C<$type> can be C<undef> or the empty string.
+
+=cut
 
 sub guess_data_type {
     my( $self, $type, @values )= @_;
@@ -191,3 +226,23 @@ SQL
 }
 
 1;
+
+=head1 BUG TRACKER
+
+Please report bugs in this module via the RT CPAN bug queue at
+L<https://rt.cpan.org/Public/Dist/Display.html?Name=SQL-Type-Guess>
+or via mail to L<sql-type-guess-Bugs@rt.cpan.org>.
+
+=head1 AUTHOR
+
+Max Maischein C<corion@cpan.org>
+
+=head1 COPYRIGHT (c)
+
+Copyright 2014 by Max Maischein C<corion@cpan.org>.
+
+=head1 LICENSE
+
+This module is released under the same terms as Perl itself.
+
+=cut
