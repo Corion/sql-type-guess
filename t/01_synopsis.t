@@ -29,9 +29,9 @@ $g->guess( @data );
 
 is $g->as_sql( table => 'test' ), <<'SQL', 'Synopsis';
 create table test (
-    fool decimal(1,0),
-    greeting varchar(5),
-    value decimal(5,3),
-    when date
+    "fool" decimal(1,0),
+    "greeting" varchar(5),
+    "value" decimal(5,3),
+    "when" date
 )
 SQL

@@ -216,7 +216,7 @@ sub as_sql {
               ;
     my $column_type= $self->column_type;
     $options{ columns }||= [ sort keys %{ $column_type } ];
-    my $columns= join ",\n", map { "    $_ $column_type->{ $_ }" } @{ $options{ columns }};
+    my $columns= join ",\n", map { qq{    "$_" $column_type->{ $_ }} } @{ $options{ columns }};
         my($sql)= <<SQL;
 create table $user$table (
 $columns
