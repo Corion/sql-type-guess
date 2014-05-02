@@ -1,5 +1,6 @@
 .gitignore
 Changes
+lib/SQL/Type/Guess.pm
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
