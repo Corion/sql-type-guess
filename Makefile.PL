@@ -16,7 +16,7 @@ regen_README('lib/SQL/Type/Guess.pm');
 my @tests = map { glob $_ } 't/*.t', 't/*/*.t';
 
 WriteMakefile1(
-    MIN_PERL_VERSION => '5.006',
+    MIN_PERL_VERSION => '5.008', # for sprintf '%2$d', ...
     META_MERGE => {
         resources => {
             repository => 'http://github.com/Corion/sql-type-guess',
