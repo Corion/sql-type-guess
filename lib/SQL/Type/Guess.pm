@@ -42,6 +42,30 @@ SQL::Type::Guess - guess an appropriate column type for a set of data
 
 =cut
 
+=head1 METHODS
+
+=head2 C<< SQL:::Type::Guess->new( %OPTIONS ) >>
+
+  my $g= SQL::Type::Guess->new();
+
+Creates a new C<SQL::Type::Guess> instance. The following options are
+supported:
+
+=over 4
+
+=item B<column_type>
+
+Hashref of already known column types.
+
+=item B<column_map>
+
+Hashref mapping the combinations SQL type names
+to the resulting type name.
+
+=back
+
+=cut
+
 sub new {
     my( $class, %options )= @_;
     
