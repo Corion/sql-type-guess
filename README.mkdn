@@ -35,6 +35,24 @@ SQL::Type::Guess - guess an appropriate column type for a set of data
     #    when date
     # )
 
+# METHODS
+
+## `SQL:::Type::Guess->new( %OPTIONS )`
+
+    my $g= SQL::Type::Guess->new();
+
+Creates a new `SQL::Type::Guess` instance. The following options are
+supported:
+
+- __column\_type__
+
+    Hashref of already known column types.
+
+- __column\_map__
+
+    Hashref mapping the combinations SQL type names
+    to the resulting type name.
+
 ## `$g->column_type`
 
     $g->guess({ foo => 1, bar => 'Hello' },{ foo => 1000, bar => 'World' });
