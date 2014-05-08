@@ -133,11 +133,11 @@ sub guess_data_type {
         } elsif( $value =~ /^((?:19|20)\d\d)-?(0\d|1[012])-?([012]\d|3[01])$/) {
             $this_value_type= 'date';
             $pre= 8;
-        } elsif( $value =~ /^[+-]?(\d+)$/) {
+        } elsif( $value =~ /^\s*[+-]?(\d+)\s*$/) {
             $this_value_type= 'decimal';
             $pre= length( $1 );
             $post= 0;
-        } elsif( $value =~ /^[+-]?(\d+)\.(\d+)$/) {
+        } elsif( $value =~ /^\s*[+-]?(\d+)\.(\d+)\s*$/) {
             $this_value_type= 'decimal';
             $pre= length( $1 );
             $post= length( $2 );
