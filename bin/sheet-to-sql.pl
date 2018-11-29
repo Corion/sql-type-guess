@@ -8,6 +8,8 @@ use Text::CleanFragment;
 use Spreadsheet::Read;
 use File::Glob qw( bsd_glob );
 
+our $VERSION = '0.04';
+
 GetOptions(
     's|sheet:s' => \my $sheet_num,
     'h|header:s' => \my $header_row,
