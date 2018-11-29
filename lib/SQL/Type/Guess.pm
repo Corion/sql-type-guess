@@ -10,9 +10,9 @@ SQL::Type::Guess - guess an appropriate column type for a set of data
 =head1 SYNOPSIS
 
     my @data=(
-      { fool => 1, when => '20140401', greeting => 'Hello', value => '1.05'  },
-      { fool => 0, when => '20140402', greeting => 'World', value => '99.05' },
-      { fool => 0, when => '20140402', greeting => 'World', value => '9.005' },
+      { seen => 1, when => '20140401', greeting => 'Hello', value => '1.05'  },
+      { seen => 0, when => '20140402', greeting => 'World', value => '99.05' },
+      { seen => 0, when => '20140402', greeting => 'World', value => '9.005' },
     );
 
     my $g= SQL::Type::Guess->new();
@@ -20,7 +20,7 @@ SQL::Type::Guess - guess an appropriate column type for a set of data
 
     print $g->as_sql( table => 'test' );
     # create table test (
-    #    "fool" decimal(1,0),
+    #    "seen" decimal(1,0),
     #    "greeting" varchar(5),
     #    "value" decimal(5,3),
     #    "when" date
