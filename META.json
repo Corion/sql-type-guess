@@ -36,7 +36,7 @@
             "Pod::Usage" : "0",
             "Spreadsheet::Read" : "0",
             "Text::CleanFragment" : "0",
-            "perl" : "5.008",
+            "perl" : "5.014",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -52,8 +52,8 @@
    "resources" : {
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/Corion/SQL-Type-Guess.git",
-         "web" : "https://github.com/Corion/SQL-Type-Guess"
+         "url" : "git://github.com/Corion/sql-type-guess.git",
+         "web" : "https://github.com/Corion/sql-type-guess"
       }
    },
    "version" : "0.04",

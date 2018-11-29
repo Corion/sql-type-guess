@@ -24,11 +24,11 @@ requires:
   Pod::Usage: '0'
   Spreadsheet::Read: '0'
   Text::CleanFragment: '0'
-  perl: '5.008'
+  perl: '5.014'
   strict: '0'
   warnings: '0'
 resources:
-  repository: git://github.com/Corion/SQL-Type-Guess.git
+  repository: git://github.com/Corion/sql-type-guess.git
 version: '0.04'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
 x_static_install: 1

@@ -1,6 +1,6 @@
 #!perl -w
 use strict;
-use 5.008;
+use 5.014; # for /r
 use Getopt::Long;
 use Pod::Usage;
 use SQL::Type::Guess;
