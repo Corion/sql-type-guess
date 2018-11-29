@@ -1,6 +1,6 @@
 
-[![Travis Build Status](https://travis-ci.org/Corion/SQL-Type-Guess.svg?branch=master)](https://travis-ci.org/Corion/SQL-Type-Guess)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/Corion/SQL-Type-Guess?branch=master&svg=true)](https://ci.appveyor.com/project/Corion/SQL-Type-Guess)
+[![Travis Build Status](https://travis-ci.org/Corion/sql-type-guess.svg?branch=master)](https://travis-ci.org/corion/sql-type-guess)
+[![appveyor build status](https://ci.appveyor.com/api/projects/status/github/corion/sql-type-guess?branch=master&svg=true)](https://ci.appveyor.com/project/corion/sql-type-guess)
 
 # NAME
 
@@ -111,7 +111,7 @@ Max Maischein `corion@cpan.org`
 
 # COPYRIGHT (c)
 
-Copyright 2014 by Max Maischein `corion@cpan.org`.
+Copyright 2014-2018 by Max Maischein `corion@cpan.org`.
 
 # LICENSE
 
