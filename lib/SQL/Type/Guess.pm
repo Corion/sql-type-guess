@@ -173,8 +173,10 @@ sub guess_data_type {
             };
         };
 
-        no warnings 'redundant';
-        $type = sprintf $column_map->{ "$type;$this_value_type" }, $descriptor->{ 'length' }, $descriptor->{ pre } + $descriptor->{ post }, $descriptor->{ post };
+        {
+            no warnings;
+            $type = sprintf $column_map->{ "$type;$this_value_type" }, $descriptor->{ 'length' }, $descriptor->{ pre } + $descriptor->{ post }, $descriptor->{ post };
+        };
     };
     $type
 };
