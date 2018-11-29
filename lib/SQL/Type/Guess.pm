@@ -107,7 +107,7 @@ sub column_map  { $_[0]->{column_map} };
 
 =head2 C<< $g->guess_data_type $OLD_TYPE, @VALUES >>
 
-    my $type= $g->guess_data_type( $type, 1,2,3,undef,'Hello','World', );
+    $type= $g->guess_data_type( $type, 1,2,3,undef,'Hello','World', );
 
 Returns the data type that encompasses the already established data type in C<$type>
 and the new values as passed in via C<@values>.
