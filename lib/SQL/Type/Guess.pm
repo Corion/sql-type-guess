@@ -121,7 +121,7 @@ If there is no preexisting data type, C<$type> can be C<undef> or the empty stri
 
 =cut
 
-my @recognizers = (
+our @recognizers = (
     sub { if( ! defined $_[0] or $_[0] eq ''                              ) { return {} }}, # empty value, nothing to change
     sub { if( $_[0] =~ /^((?:19|20)\d\d)-?(0\d|1[012])-?([012]\d|3[01])$/ ) { return { this_value_type => 'date', 'pre' => 8 } }}, # date
     sub { if( $_[0] =~ m!^\s*[01]\d/[0123]\d/(?:19|20)\d\d\s[012]\d:[012345]\d:[0123456]\d(\.\d*)?$! ) { return { this_value_type => 'datetime',        } }}, # US-datetime
