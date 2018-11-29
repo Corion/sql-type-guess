@@ -1,7 +1,6 @@
 package SQL::Type::Guess;
 use strict;
-use vars qw($VERSION);
-$VERSION= '0.03_01';
+our $VERSION= '0.03_01';
 
 =head1 NAME
 
